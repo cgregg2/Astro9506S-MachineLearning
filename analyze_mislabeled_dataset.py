@@ -6,7 +6,10 @@ import numpy as np
 import sys
 import pandas as pd
 import matplotlib.pyplot as plt
-# interstellarTransforms.py (this holds import functions such as unitConversion) is located
+
+# adding GalacticSimulation folder to the system path. This is where interstellarTransforms.py 
+# (this holds import functions such as unitConversion) is located
+sys.path.insert(0, "L:/GitHub/PhD_Work/InterstellarMeteoroids/GalacticSimulation")
 from interstellarTransforms import unitConversions
 import Firenze_read
 
@@ -14,17 +17,17 @@ import Firenze_read
 uCon = unitConversions()
 
 # File that contains the mislabeled data
-pick_file = "Gaia_DR3_4472832130942575872_2000x1Myr_-100Myr_110Myr_ejectaDF_REDUCEDnonClosedata_MinMaxScaler_MLPClassifier_mislabeled_data.pickle"
+pick_file = "L:/GitHub/PhD_Work/InterstellarMeteoroids/GalacticSimulation/plotting/Gaia_DR3_4472832130942575872_2000x1Myr_-100Myr_110Myr_ejectaDF_REDUCEDnonCloseData_MinMaxScaler_MLPClassifier_mislabeled_data.pickle"
 
 # Gaia_DR3_4472832130942575872 (nearest Gaia star) ejected 2000 particles every 1Myr from -100 Myr moved forward 110Myr (t=-100Myr --> t=10myr) simulation data
-fullSimFile_pickle_dump = "integration_outputs/titan/20230208/2023-02-08_17h-26m-14s_dataDump_RKF.pickle"
-fullSimFile_pick = "integration_outputs/titan/20230208/2023-02-08_17h-26m-14s_integrateMW_RKF_Executed_120561s.pickle"
+fullSimFile_pickle_dump = "L:/GitHub/PhD_Work/InterstellarMeteoroids/GalacticSimulation/integration_outputs/titan/20230208/2023-02-08_17h-26m-14s_dataDump_RKF.pickle"
+fullSimFile_pick = "L:/GitHub/PhD_Work/InterstellarMeteoroids/GalacticSimulation/integration_outputs/titan/20230208/2023-02-08_17h-26m-14s_integrateMW_RKF_Executed_120561s.pickle"
 
 # Set to True if the minimum heliocentric distances have already been calculated (not the first run through)
 # If this is false, it will calculate the minimum heliocentric distances and save them to a the pickle file given here
 # If this is true, it will load the minimum heliocentric distances from the pickle file given here
 min_dist_calc_done = True
-min_dist_calc_file = "minimum_helio_dist_mislabeled_ejecta_REDUCED.pickle"
+min_dist_calc_file = "L:/GitHub/PhD_Work/InterstellarMeteoroids/GalacticSimulation/plotting/minimum_helio_dist_mislabeled_ejecta_REDUCED.pickle"
 
 # File base name for plots to be saved under
 plots_file = min_dist_calc_file.replace('minimum_helio_dist_mislabeled_ejecta', 'minimum_helio_dist_mislabeled_ejecta_plots')
@@ -87,8 +90,7 @@ plt.text(pcval+0.25, 250, '0.485 pc', rotation=90, size=12)
 
 plt.xlabel('Minimum heliocentric distance [pc]')
 plt.ylabel('Number of ejecta from false positives')
-# plt.savefig(plots_file+'long.png', dpi=600)
-
+plt.savefig(plots_file+'long.png', dpi=600)
 plt.clf()
 plt.close()
 
