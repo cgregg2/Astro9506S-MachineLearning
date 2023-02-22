@@ -24,10 +24,11 @@ def collect_ejecta_params_from_file(simfile_pickled, pickled_dump, stringWithEje
 	import numpy as np
 	import sys
 	import pandas as pd
-
-	# adding GalacticSimulation folder to the system path. This is where interstellarTransforms.py 
-	# (this holds import functions such as unitConversion) is located
-	sys.path.insert(0, "L:/GitHub/PhD_Work/InterstellarMeteoroids/GalacticSimulation")
+	
+	# For My Machine:
+# 	# adding GalacticSimulation folder to the system path. This is where interstellarTransforms.py 
+# 	# (this holds import functions such as unitConversion) is located
+# 	sys.path.insert(0, "L:/GitHub/PhD_Work/InterstellarMeteoroids/GalacticSimulation")
 	from interstellarTransforms import unitConversions
 
 	# Creating a callable unitConversion object
