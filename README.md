@@ -6,7 +6,9 @@ The results of a galactic simulation where the nearest star in the Gaia catalogu
 Code order of use:
 
 1 - preparing_ejecta_analysis.py
+
     This uses collect_ejecta_params_from_file.py to store useful data in dataframe
     
 2 - analyze_pickled_ejecta_dataframes.py
+
     This is where the machine learning techniques can be put to use
