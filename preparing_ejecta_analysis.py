@@ -11,11 +11,11 @@ import pandas as pd
 ############# Simulation output files that are used to collect the necesasry data: #############
 
 # Gaia_DR3_4472832130942575872 (nearest Gaia star) ejected 2000 particles every 1Myr from -100 Myr moved forward 110Myr (t=-100Myr --> t=10myr)
-fullSimFile_pickle_dump = "L:/GitHub/PhD_Work/InterstellarMeteoroids/GalacticSimulation/integration_outputs/titan/20230208/2023-02-08_17h-26m-14s_dataDump_RKF.pickle"
-fullSimFile_pick = "L:/GitHub/PhD_Work/InterstellarMeteoroids/GalacticSimulation/integration_outputs/titan/20230208/2023-02-08_17h-26m-14s_integrateMW_RKF_Executed_120561s.pickle"
+fullSimFile_pickle_dump = "integration_outputs/titan/20230208/2023-02-08_17h-26m-14s_dataDump_RKF.pickle"
+fullSimFile_pick = "integration_outputs/titan/20230208/2023-02-08_17h-26m-14s_integrateMW_RKF_Executed_120561s.pickle"
 # (ONLY CLOSE APPROACHES FROM ABOVE SIMULATION)
-close_approach_pickle_dump =    "L:/GitHub/PhD_Work/InterstellarMeteoroids/GalacticSimulation/integration_outputs/titan/20230208/CloseApproaches/17h-26m-14s/20230213/2023-02-13_09h-45m-25s_dataDump_RKF.pickle"
-closeSimFile_pick ="L:/GitHub/PhD_Work/InterstellarMeteoroids/GalacticSimulation/integration_outputs/titan/20230208/CloseApproaches/17h-26m-14s/20230213/2023-02-13_09h-45m-25s_integrateMW_RKF_Executed_406s.pickle"
+close_approach_pickle_dump =    "integration_outputs/titan/20230208/CloseApproaches/17h-26m-14s/20230213/2023-02-13_09h-45m-25s_dataDump_RKF.pickle"
+closeSimFile_pick ="integration_outputs/titan/20230208/CloseApproaches/17h-26m-14s/20230213/2023-02-13_09h-45m-25s_integrateMW_RKF_Executed_406s.pickle"
 
 # Save output file name
 output_file_name = 'Gaia_DR3_4472832130942575872_2000x1Myr_-100Myr_110Myr_ejectaDF.pickle'
