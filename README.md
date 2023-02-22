@@ -9,10 +9,14 @@ Code order of use:
 
     This uses collect_ejecta_params_from_file.py to store useful data in dataframe
     
-3 - AML_KernelPCA.py
+2 - AML_KernelPCA.py
 
     This analyzes 5 kernels and 7 classifiers to show decision boundary on 2d plot as well as outputting predicted accuracy of each classifier
     
-2 - analyze_pickled_ejecta_dataframes.py
+3 - analyze_pickled_ejecta_dataframes.py
 
     This is where alternate machine learning techniques can be put to use
+    
+4 - analyze_mislabeled_dataset.py
+
+    This is where you can take a closer look at the mislabeled data from the classifier. This creates a histogram to check the actual minimal heliocentric distances of the data said to be close approaches by the classifier that weren't flagged in the simualtion.
